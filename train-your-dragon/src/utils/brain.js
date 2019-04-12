@@ -51,3 +51,10 @@ export function execute(input, trainedNet) {
 export function startTraining() {
     return train(trainingData);
 }
+
+export function update(tobeAdded) {
+
+    trainingData.push(tobeAdded);
+
+    return train(trainingData);
+}

@@ -5,7 +5,16 @@ Brain JS requires data to be "encoded" as a value between 0 and 1, this means we
  */
 
 export function encodeText(arg){
-    return arg.split('').map(x => (x.charCodeAt(0) / 255));
+    const split = arg.split('');
+    const mapped = split.map(x => {
+        const firstChar = x.charCodeAt(0);
+
+        const interimCode = firstChar / 255;
+
+        return interimCode;
+    });
+
+    return mapped;
 }
 
 export function processTrainingData(data) {

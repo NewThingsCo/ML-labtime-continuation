@@ -1,5 +1,6 @@
 import * as actions from "./actions";
-import {execute, startTraining} from "../../utils/brain";
+import * as feedbackActions from "../feedback/actions"
+import {execute, startTraining, update} from "../../utils/brain";
 
 
 const initialState = {
@@ -27,6 +28,11 @@ const modelTrainingReducer = (state = initialState, action) => {
             return({
                 ...state,
                 currentOutput: execute(action.input, state.trainedNet)
+            });
+        case feedbackActions.TRAIN_MODEL_WITH_INPUT:
+            return({
+                ...state,
+                trainedNet : update(action.tobeAdded)
             });
         default:
             return state;

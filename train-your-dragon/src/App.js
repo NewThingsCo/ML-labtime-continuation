@@ -2,6 +2,7 @@ import React from 'react'
 import TrainModel from './components/train-model'
 import UseModel from './components/use-model';
 import Results from './components/results';
+import Feedback from './components/feedback';
 
 export class App extends React.Component {
     render() {
@@ -10,6 +11,7 @@ export class App extends React.Component {
                 <TrainModel />
                 <UseModel />
                 <Results />
+                <Feedback />
             </div>
         )
     }
