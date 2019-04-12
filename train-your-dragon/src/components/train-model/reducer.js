@@ -1,5 +1,6 @@
 import * as actions from "./actions";
 import * as feedbackActions from "../feedback/actions"
+import * as usageActions from "../use-model/actions"
 import {execute, startTraining, update} from "../../utils/brain";
 
 
@@ -19,12 +20,12 @@ const modelTrainingReducer = (state = initialState, action) => {
             trainedNet : startTraining(),
             testDisabled : false
         });
-        case actions.REGISTER_INPUT:
+        case usageActions.REGISTER_INPUT:
             return ({
             ...state,
             currentInput: action.input
         });
-        case actions.EXECUTE_INPUT_ON_MODEL:
+        case usageActions.EXECUTE_INPUT_ON_MODEL:
             return({
                 ...state,
                 currentOutput: execute(action.input, state.trainedNet)

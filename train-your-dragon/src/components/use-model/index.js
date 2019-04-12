@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import {Button, Container} from '../style';
-import {executeInputOnModel, registerCurrentInput} from "../train-model/actions";
+import {executeInputOnModel, registerCurrentInput} from "./actions";
 
 
 const mapStateToProps = state => {
