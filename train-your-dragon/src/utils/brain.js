@@ -37,9 +37,12 @@ export function execute(input, trainedNet) {
         certainty = Math.floor(results.kardashian * 100)
     }
 
+
+    console.log(certainty);
+
     return ({
-        output,
-        certainty,
+        output : isNaN(certainty) ? "Dont know!" : output,
+        certainty: isNaN(certainty) ? 0 : certainty,
         length: input.length
     });
 }

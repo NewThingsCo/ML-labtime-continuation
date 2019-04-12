@@ -39,6 +39,9 @@ class UseModel extends React.Component {
 
     render() {
         const {testDisabled} = this.props;
+        if(testDisabled){
+            return null;
+        }
 
         return (
             <Container>
