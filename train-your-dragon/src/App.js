@@ -3,6 +3,7 @@ import TrainModel from './components/train-model'
 import UseModel from './components/use-model';
 import Results from './components/results';
 import Feedback from './components/feedback';
+import MusicMaker from './components/music-maker';
 
 export class App extends React.Component {
     render() {
@@ -12,6 +13,7 @@ export class App extends React.Component {
                 <UseModel />
                 <Results />
                 <Feedback />
+                <MusicMaker />>
             </div>
         )
     }
